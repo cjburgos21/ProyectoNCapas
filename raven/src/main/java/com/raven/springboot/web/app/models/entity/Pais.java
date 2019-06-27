@@ -40,7 +40,9 @@ public class Pais implements Serializable{
 		return serialVersionUID;
 	}
 
-	
+	/**
+	 * Variable para poder enviar los datos serializados a través de la red
+	 */
 	private static final long serialVersionUID = 1L;
 	
 }

@@ -84,8 +84,8 @@ public class UsuarioController {
 			return "forms/user-form";
 			
 		}
-		String mensajeFlash = (usuario.getIdUsuario() != null) ? "Usuario Editado exitosamente"
-				: "Usuario Creado exitosamente";
+		String mensajeFlash = (usuario.getIdUsuario() != null) ? "Usuario Editado con éxito!"
+				: "Usuario Creado con éxito!";
 		
 		usuarioService.save(usuario);
 		
@@ -107,13 +107,13 @@ public class UsuarioController {
 			
 			if (usuario == null) {
 				
-				flash.addFlashAttribute("error", "El ID del usuario no existe en la base");
+				flash.addFlashAttribute("error", "El ID del usuario no existe en la BBDD!");
 				
 				return "redirect:/admin/usuarios";
 			}
 		} else {
 			
-			flash.addFlashAttribute("error", "El ID del usuario no puede ser cero");
+			flash.addFlashAttribute("error", "El ID del usuario no puede ser cero!");
 			
 			return "redirect:/admin/usuarios";
 		}

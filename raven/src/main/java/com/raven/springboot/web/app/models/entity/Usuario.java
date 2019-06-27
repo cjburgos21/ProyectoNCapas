@@ -179,6 +179,33 @@ public class Usuario implements Serializable {
 		return serialVersionUID;
 	}
 
-	
+	/*
+	 * Esta anotación sirve para indicar el formato con el que se va guardar una
+	 * fecha
+	 */
+	/*
+	 * @Temporal(TemporalType.DATE)
+	 * 
+	 * @DateTimeFormat(pattern="yyyy-MM-dd")
+	 * 
+	 * @Column(name="fecha_nacimiento") private Date fechaNacimiento;
+	 * 
+	 * private int edad;
+	 * 
+	 * private String direccion;
+	 * 
+	 * private double saldo;
+	 * 
+	 * private boolean estado;
+	 * 
+	 */
+
+	/*
+	 * 
+	 * private Long id_municipio;
+	 * 
+	 * private Long id_rol;
+	 * 
+	 */
 
 }

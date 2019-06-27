@@ -49,8 +49,8 @@ public class SalaController {
 			return  "forms/sala-form";
 		}
 		
-		String mensajeFlash = (sala.getIdSala() != null) ? "Sala Editada exitosamente"
-				: "Sala Creada exitosamente";
+		String mensajeFlash = (sala.getIdSala() != null) ? "Sala Editada con éxito!"
+				: "Sala Creada con éxito!";
 		salaService.save(sala);
 		status.setComplete();
 		flash.addFlashAttribute("success", mensajeFlash);
@@ -68,13 +68,13 @@ public class SalaController {
 			
 			if (sala == null) {
 				
-				flash.addFlashAttribute("error", "El ID de la sala no existe en la base");
+				flash.addFlashAttribute("error", "El ID de la sala no existe en la BBDD!");
 				
 				return "redirect:/admin/salas";
 			}
 		} else {
 			
-			flash.addFlashAttribute("error", "El ID de la sala no puede ser cero");
+			flash.addFlashAttribute("error", "El ID de la sala no puede ser cero!");
 			
 			return "redirect:/admin/salas";
 		}

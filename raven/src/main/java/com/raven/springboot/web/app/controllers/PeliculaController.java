@@ -53,8 +53,8 @@ public class PeliculaController {
 		
 		System.out.println("ID DE LA PELICULA"+ pelicula.getIdPelicula());
 		
-		String mensajeFlash = (pelicula.getIdPelicula() != null) ? "Pelicula Editada exitosamente"
-				: "Pelicula Creada exitosamente";
+		String mensajeFlash = (pelicula.getIdPelicula() != null) ? "Pelicula Editada con éxito!"
+				: "Pelicula Creada con éxito!";
 		peliculaService.save(pelicula);
 		status.setComplete();
 		flash.addFlashAttribute("success", mensajeFlash);
@@ -72,13 +72,13 @@ public class PeliculaController {
 			
 			if (pelicula == null) {
 				
-				flash.addFlashAttribute("error", "El ID de la pelicula no existe en la base");
+				flash.addFlashAttribute("error", "El ID de la pelicula no existe en la BBDD!");
 				
 				return "redirect:/admin/peliculas";
 			}
 		} else {
 			
-			flash.addFlashAttribute("error", "El ID de la pelicula no puede ser cero");
+			flash.addFlashAttribute("error", "El ID de la pelicula no puede ser cero!");
 			
 			return "redirect:/admin/peliculas";
 		}
